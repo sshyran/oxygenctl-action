@@ -52,6 +52,9 @@ jobs:
           cd hydrogen-app
           yarn
 
+      - name: Set graphql deploy endpoint
+        run: echo "OXYGEN_GRAPHQL_DEPLOY_ENDPOINT=/dms_tempor1s" >> $GITHUB_ENV
+
       - name: oxygenctl Deploy
         uses: ./
         id: oxygenctl-action
